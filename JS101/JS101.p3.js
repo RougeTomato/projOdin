@@ -10,4 +10,6 @@ function getPrimeFactors(num) {
     return factors;
 }
 
-getPrimeFactors(25);
+var answer = getPrimeFactors(600851475143);
+
+console.log(answer[answer.length-1])
