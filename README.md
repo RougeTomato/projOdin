@@ -1,2 +1,2 @@
 # projOdin
-project odin project files
+project odin assignment files.
