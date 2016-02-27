@@ -1,24 +1,28 @@
 
 $(document).ready(function () {
 
-//need to reverse cols and rows because of inline-block formatting
+  //need to reverse cols and rows because of inline-block formatting
   var noc = 5;
   var nor = 4;
 
   $("#addRow").click(function() {
     nor++;
+    $("#nor").html(nor);
   })
 
   $("#minRow").click(function() {
     nor--;
+    $("#nor").html(nor);
   })
 
   $("#addCol").click(function() {
     noc++;
+    $("#noc").html(noc);
   })
 
   $("#minCol").click(function() {
     noc--;
+    $("#noc").html(noc);
   })
 
 
@@ -30,14 +34,12 @@ $(document).ready(function () {
   var divsR = '"' + rowTemp.repeat(nor) + '"';
 
   $("#submit").click(function() {
+    $(".container").empty();
     $(".container").append(divsC);
   })
 
-  $("#reset").click() {
-    $("#reset").function() {
-      noc = 0;
-      nor = 0;
-    }
-  }
+  $("#reset").click(function () {
+    $(".container").empty()
+  })
 
 })
