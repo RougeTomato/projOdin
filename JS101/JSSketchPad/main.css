@@ -1,8 +1,44 @@
+* {
+  font-family: sans-serif;
+}
+
+label {
+  font-family: sans-serif;
+}
+
 .container {
   width: 100%;
+  display: inline-block;
+}
+
+.controls {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+#display {
+  float: left;
+  text-align: left;
+}
+
+.button-wrapper {
+  display: inline-block;
+}
+
+#submit {
+  margin: 20px;
 }
 
 .block {
   height: 100px; width: 100px;
   background-color: grey;
+}
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+ul {
+  list-style-type: none;
 }

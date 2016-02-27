@@ -1,27 +1,43 @@
 
 $(document).ready(function () {
 
-  var nor = prompt("input number of rows");
-    //NaN validation
-    /*if (nor == NaN) {
-      alert("NaN");
-      nor = prompt("input a number!")
-    }*/
+//need to reverse cols and rows because of inline-block formatting
+  var noc = 5;
+  var nor = 4;
 
-  var noc = prompt("input number of columns");
+  $("#addRow").click(function() {
+    nor++;
+  })
 
-  var divsR = '<li><div class="block></div></li>"';
-  var rows = divsR.repeat(nor);
+  $("#minRow").click(function() {
+    nor--;
+  })
 
-  var divsC = '<ul>' + rows + '</ul>';
-  var columns = divsC.repeat(noc);
+  $("#addCol").click(function() {
+    noc++;
+  })
 
-  $(".container").append(noc)
+  $("#minCol").click(function() {
+    noc--;
+  })
 
 
+  //need to fix string concatenation for proper number of elements in grid
+  var colTemp = '<li><div class="block"></div></li>';
+  var divsC = colTemp.repeat(noc);
 
+  var rowTemp = '<ul>' + divsC + '</ul><br>';
+  var divsR = '"' + rowTemp.repeat(nor) + '"';
 
+  $("#submit").click(function() {
+    $(".container").append(divsC);
+  })
 
-
+  $("#reset").click() {
+    $("#reset").function() {
+      noc = 0;
+      nor = 0;
+    }
+  }
 
 })
